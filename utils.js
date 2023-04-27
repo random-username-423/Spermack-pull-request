@@ -13,7 +13,7 @@ const wait = (duration) => {
 
 
 function preparePrompt(messages) {
-  return messages.filter(m => m.content?.trim()).map(m => {
+  return '\n\n' + messages.filter(m => m.content?.trim()).map(m => {
     let author = '';
     switch (m.role) {
       case 'user': author = 'Human'; break;
